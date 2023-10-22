@@ -2,7 +2,7 @@ console.log("Hello World!");
 
 let data = [
   {
-    name: "Matero",
+    name: "Mateo",
     age: "30",
   },
   {
@@ -26,3 +26,11 @@ let data = [
     age: "34",
   },
 ];
+
+const info = document.querySelector("#info");
+
+let details = data.map(function (item) {
+  return "<div>" + item.name + " " + "is " + item.age + "</div>";
+});
+
+info.innerHTML = details.join("\n");
